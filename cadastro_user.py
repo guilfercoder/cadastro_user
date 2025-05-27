@@ -1,3 +1,5 @@
+import email
+
 usuarios = []
 
 def menu():
@@ -34,3 +36,34 @@ def listar_usuarios():
         for i, usuario in enumerate(usuarios, start=1):
             print(f"{i}. Nome: {usuario['nome']}, Email: {usuario['email']}, Idade: {usuario['idade']}")
 
+def remover_usuario(nome):
+    email = input("Digite o e-mail do usuário que deseja remover: ")
+
+    for usuario in usuarios:
+        if usuario['email'] == email:
+            usuarios.remove(usuario)
+            print(f" Usuário com e-mail {email} removido com sucesso!")
+            return
+    print("Usuário não encontrado.")
+
+
+def alterar_usuario():
+    email = input("Digite o e-mail do usuário que deseja alterar: ")
+
+    for usuario in usuarios:
+        if usuario['email'] == email:
+            print(f"\n Dados atuais: Nome: {usuario['nome']}, E-mail: {usuario['email']}, Idade: {usuario['idade']}")
+
+            novo_nome = input("Digite o novo nome(ou pressione Enter para manter o atual: ")
+            novo_email = input("Digite o novo e-mail (ou pressione Enter para manter o atual: ")
+            nova_idade = input("Digite a nova idade(ou pressione Enter para manter o atual: ")
+
+            if novo_nome:
+                usuario['nome'] = novo_nome
+            if novo_email:
+                usuario['email'] = novo_email
+            if nova_idade:
+                usuario['idade'] = nova_idade
+
+            print("Usuário alterado com sucesso!")
+            return
