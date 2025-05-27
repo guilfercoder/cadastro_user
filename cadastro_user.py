@@ -7,3 +7,22 @@ def menu():
     print("3 - Alterar Usuários")
     print("4 - Remover Usuários")
     print("5 - Sair do Programa")
+
+
+def cadastrar():
+    nome = input("Nome: ")
+    senha = input("Senha: ")
+    email = input("Email: ")
+    idade = input("Idade: ")
+
+    usuario = {
+        "nome": nome,
+        "senha": senha,
+        "email": email,
+        "idade": idade
+
+    }
+
+    usuarios.append(usuario)
+    print(f"Usuário {nome} cadastrado com sucesso!")
+
