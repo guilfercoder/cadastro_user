@@ -1,5 +1,3 @@
-import email
-
 usuarios = []
 
 def menu():
@@ -36,7 +34,7 @@ def listar_usuarios():
         for i, usuario in enumerate(usuarios, start=1):
             print(f"{i}. Nome: {usuario['nome']}, Email: {usuario['email']}, Idade: {usuario['idade']}")
 
-def remover_usuario(nome):
+def remover_usuario():
     email = input("Digite o e-mail do usuário que deseja remover: ")
 
     for usuario in usuarios:
