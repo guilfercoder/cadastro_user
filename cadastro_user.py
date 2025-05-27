@@ -26,3 +26,11 @@ def cadastrar():
     usuarios.append(usuario)
     print(f"Usuário {nome} cadastrado com sucesso!")
 
+def listar_usuarios():
+    if not usuarios:
+        print("Nenhum usuário cadastrado.")
+    else:
+        print("\n ===== Lista de Usuários =====")
+        for i, usuario in enumerate(usuarios, start=1):
+            print(f"{i}. Nome: {usuario['nome']}, Email: {usuario['email']}, Idade: {usuario['idade']}")
+
