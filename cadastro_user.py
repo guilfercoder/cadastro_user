@@ -67,3 +67,22 @@ def alterar_usuario():
 
             print("Usuário alterado com sucesso!")
             return
+    print("Usuário não encontrado.")
+
+while True:
+    menu()
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        cadastrar()
+    elif opcao == "2":
+        listar_usuarios()
+    elif opcao == "3":
+        remover_usuario()
+    elif opcao == "4":
+         alterar_usuario()
+    elif opcao == "5":
+        print("Saindo do sistema...Obrigado por utilizar o programa.")
+        break
+    else:
+        print("Opção inválida. Tente novamente.")
